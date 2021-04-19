@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <title>Calculator</title>
+  <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+<style type="text/css">
+  body{
+    background-color: #154360 ;
+  }
+  .calc{
+    background-color: #FDFEFE;
+  width: 80%;
+  height: 600px;
+  border: 2px solid #616A6B;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 5px 5px #CCD1D1 ;
+  }
+
+.calcscreen {
+      width: 100%;
+      height: 120px;
+      background-color: #17202A ;
+      text-align: right;
+    
+    }
+ .calcscreen input{
+  position:relative;  
+left:2px;  
+top:2px;  
+height:117px;  
+color:white;  
+background-color:#17202A;  
+font-size:30px;  
+text-align:right;  
+ }
+
+ .button  
+{  
+width:15%;  
+height:50px;
+margin: 5px;  
+border:none;  
+border-radius:8px;  
+margin-left:21px;  
+cursor:pointer;  
+border-top:2px solid transparent; 
+transition-duration: 0.4s;
+  cursor: pointer;
+
+}  
+
+.button:hover {
+  background-color: #40E0D0;
+  color: solid blue;
+}
+
+.gray{
+  background-color: #FEF9E7;
+  border: 2px solid black;
+  color: black;
+  font-size: 21px;
+  text-align: center;
+}
+
+.orange{
+  background-color: #FFBF00;
+  border: 2px solid #FFBF00;
+  color: black;
+  font-size: 21px;
+  text-align: center;
+}
+
+</style>
+
+</head>
+
+<body>
+  <br><br>
+<div class="container">
+  <div class="row">
+     
+    
+        <div class="col">
+          <center>
+            <div class="calc">
+              <div class="calcscreen">
+                <input type="text" readonly size="18" id="d">
+              </div>
+              <br><br>
+              <div class="keys">  
+               <p>
+                <input type="button" class="button btn-info" value="INFO" onclick='c("Calculator...")'>
+                <input type="button" class="button btn-info" value="M" onclick='c("select an operation..")'>
+                <input type="button" class="button btn-info" value="C" onclick='c("")'>
+                 
+                <input type="button" class="button orange" value="/" onclick='v("/")'>
+               </p>
+               </p>  
+               <p>
+                <input type="button" class="button gray " value="7" onclick='v("7")'>
+                <input type="button" class="button gray" value="8" onclick='v("8")'>
+                <input type="button" class="button gray" value="9" onclick='v("9")'>
+                <input  type="button" class="button orange" value="*" onclick='v("*")'>
+               </p>  
+               <p>
+                <input type="button" class="button gray " value="4" onclick='v("4")'>
+                <input type="button" class="button gray " value="5" onclick='v("5")'>
+                <input type="button" class="button gray" value="6" onclick='v("6")'>
+                <input  type="button" class="button orange" value="-" onclick='v("-")'>
+               </p>  
+               <p>
+                <input type="button" class="button gray" value="1" onclick='v("1")'>
+                <input type="button" class="button gray" value="2" onclick='v("2")'>
+                <input type="button" class="button gray" value="3" onclick='v("3")'>
+                <input  type="button" class="button orange" value="+" onclick='v("+")'>
+               </p>  
+               <p>
+                <input type="button" class="button gray" value="." onclick='v(".")'>
+                <input type="button" class="button gray" value="0" onclick='v("0")'>
+                <input  type="button" class="button btn-danger" value="=" onclick='e()'> 
+                <input type="button" class="button orange" value="mod" onclick='v("%")'>
+              </p>
+        </div>  
+
+              </div>
+           </center>
+          </div>
+          
+</div>  
+</div>
+
+
+<script type="text/javascript">
+  function c(val)  
+{  
+document.getElementById("d").value=val;  
+}  
+function v(val)  
+{document.getElementById("d").value+=val;  
+}  
+function e()  
+{  
+try  
+    {  
+     c(eval(document.getElementById("d").value))  
+    }  
+    catch(e)  
+    {  
+     c('Error') }  
+} 
+</script>
+
+</body>
+</html>
