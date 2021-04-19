@@ -16,26 +16,27 @@
   }
   .calc{
     background-color: #FDFEFE;
-  width: 80%;
-  height: 600px;
+  width: 100%;
+  height: 720px;
   border: 2px solid #616A6B;
-  padding: 20px;
+  padding: 15px;
   margin: 15px;
   box-shadow: 5px 5px #CCD1D1 ;
   }
 
 .calcscreen {
       width: 100%;
-      height: 120px;
+      height: 130px;
       background-color: #17202A ;
       text-align: right;
     
     }
  .calcscreen input{
+   width: 100%;
   position:relative;  
 left:2px;  
 top:2px;  
-height:117px;  
+height:127px;  
 color:white;  
 background-color:#17202A;  
 font-size:30px;  
@@ -44,12 +45,12 @@ text-align:right;
 
  .button  
 {  
-width:15%;  
-height:50px;
+width:20%;  
+height:65px;
 margin: 5px;  
 border:none;  
 border-radius:8px;  
-margin-left:21px;  
+margin:10px;  
 cursor:pointer;  
 border-top:2px solid transparent; 
 transition-duration: 0.4s;
@@ -66,7 +67,7 @@ transition-duration: 0.4s;
   background-color: #FEF9E7;
   border: 2px solid black;
   color: black;
-  font-size: 21px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -74,7 +75,7 @@ transition-duration: 0.4s;
   background-color: #FFBF00;
   border: 2px solid #FFBF00;
   color: black;
-  font-size: 21px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -97,9 +98,9 @@ transition-duration: 0.4s;
               <br><br>
               <div class="keys">  
                <p>
-                <input type="button" class="button btn-info" value="INFO" onclick='c("Calculator...")'>
-                <input type="button" class="button btn-info" value="M" onclick='c("select an operation..")'>
-                <input type="button" class="button btn-info" value="C" onclick='c("")'>
+                <input type="button" class="button btn-info" value="INFO" style="font-size: 30px;"onclick='c("Calculator...")'>
+                <input type="button" class="button btn-info" value="M" style="font-size: 30px;"onclick='c("select an operation..")'>
+                <input type="button" class="button btn-info"style="font-size: 30px;" value="C" onclick='c("")'>
                  
                 <input type="button" class="button orange" value="/" onclick='v("/")'>
                </p>
